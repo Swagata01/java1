@@ -1,0 +1,75 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        int i;
+        System.out.print("\nEnter upto which roll no you want to check : ");
+        int n = sc.nextInt();
+        
+        for( i = 1 ; i <= n ; i ++ )
+        {
+            System.out.print("\nEnter the name of the student : ");
+            String name = sc.next();
+            System.out.print("Enter Roll no : ");
+            int roll = sc.nextInt();
+        
+            System.out.print("Enter marks of Mathematics : ");
+            float maths = sc.nextFloat();
+            System.out.print("Enter marks of Physics : ");
+            float phy = sc.nextFloat();
+            System.out.print("Enter marks of Chemistry : ");
+            float chem = sc.nextFloat();
+            System.out.print("Enter marks of Computer Science : ");
+            float coms = sc.nextFloat();
+            
+            if( maths < 30 )
+                System.out.print("Fails in Mathematics");
+            else if( phy < 30 )
+                System.out.print("Fails in Physics");
+            else if( chem < 30 )
+                System.out.print("Fails in Chemistry");
+            else if( coms < 30 )
+                System.out.print("Fails in Computer Science");
+            else
+                System.out.print("Pass in all subjects...");
+            
+            
+            float total = maths + phy + chem + coms;
+            System.out.print("The total marks the student got : ");
+            System.out.print(total);
+        
+            float percentage = total / 4;
+            System.out.print("Percentage marks : " + " % " + percentage);
+            
+            System.out.print("Grade : ");
+            if( 101 > percentage && percentage > 89 )
+                System.out.print("Outstanding");
+            else if ( 90 > percentage && percentage > 79 )
+                System.out.print("Excellent");
+            else if( 80 > percentage && percentage > 69 )
+                System.out.print("Very Good");
+            else if ( 70 > percentage && percentage > 59 )
+                System.out.print("Good");
+            else if( 60 > percentage && percentage > 49 )
+                System.out.print("Average");
+            else if ( 50 > percentage && percentage > 39 )
+                System.out.print("Bad");
+            else if( 40 > percentage && percentage > 29 )
+                System.out.print("Very bad");
+            else 
+                System.out.print("Fail");
+        }    
+    }
+}
+
+
+
+
+
+
+
+
+
